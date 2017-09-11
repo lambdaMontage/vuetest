@@ -12,7 +12,7 @@
         <router-link to="/seller">商家</router-link>
       </div>
     </div>
-    <!-- keep-alive 缓存不活动的组件  -->
+    <!-- 当你在切换当时候 keep-alive 会缓存这个组件  -->
     <keep-alive>
       <router-view :seller="seller"></router-view>
     </keep-alive>
@@ -26,6 +26,8 @@
   const ERR_OK = 0;
 
   export default {
+
+    //用data 返回数值 避免在多次引用时值不会变。
     data() {
       return {
         seller: {
@@ -47,7 +49,7 @@
       });
     },
     components: {
-      'V-header': header
+      'v-header': header
     }
   };
 </script>
