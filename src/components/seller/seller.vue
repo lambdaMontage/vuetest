@@ -3,7 +3,7 @@
     <div class="seller-content">
       <div class="overview">
         <h1 class="title">{{seller.name}}</h1>
-        <div class="">
+        <div class="desc border-1px">
           <star :size="36" :score="seller.score"></star>
           <span class="text">{{seller.ratingCount}}</span>
           <span class="text">月售{{seller.sellerCount}}单</span>
@@ -40,7 +40,7 @@
           <p class="content">{{seller.bulletin}}</p>
         </div>
         <ul v-if="seller.supports" class="supports">
-          <li class="support-item border-1px" v-for="(item,index)" in seller.supports>
+          <li class="support-item border-1px" v-for="(item,index) in seller.supports">
             <span class="icon" :class="classMap[seller.supports[index].type]"></span>
             <span class="text">{{seller.supports[index].description}}</span>
           </li>
@@ -75,7 +75,7 @@
 
 <script type="text/ecmascript-6">
 
-  import BScroll from 'nobetter-scroll';
+  import BScroll from 'better-scroll';
   import split from '../split/split.vue';
   import star from '../star/star.vue';
   import {saveToLocal, loadFromLocal} from '../../common/js/store';
