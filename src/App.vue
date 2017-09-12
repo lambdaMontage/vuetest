@@ -47,7 +47,7 @@
       });
     },
     components: {
-      'V-header': header
+      'v-header': header
     }
   };
 </script>
