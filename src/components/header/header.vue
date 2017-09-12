@@ -19,13 +19,13 @@
       </div>
       <div v-if="seller.supports" class="support-count" @click="showDetail">
         <span class="count">{{seller.supports.length}}个</span>
-        <i class="icon iconFont icon-leftAndRight"></i>
+        <i class="icon iconfont icon-leftAndRight"></i>
       </div>
     </div>
     <div class="bulletin-wrapper" @click="showDetail">
       <span class="bulletin-title"></span>
       <span class="bulletin-text">{{seller.bulletin}}</span>
-      <i class="icon iconFont icon-leftAndRight"></i>
+      <i class="icon ico    nfont icon-leftAndRight"></i>
     </div>
     <div class="background">
       <img :src="seller.avatar" height="100%" width="100%">
