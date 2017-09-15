@@ -40,13 +40,15 @@
     },
     // 创建实例之后，被调用
     created() {
-      this.$http.get('/api/seller/?id=' + this.seller.id).then((response) => {
-        response = response.body;
-        if (response.errno === ERR_OK) {
-          //Object.assign 在已有属性上添加新的属性 并赋值给新的对象
-          this.seller = Object.assign({}, this.seller, response.data);
-        }
-      });
+//      this.$http.get('/api/seller?id=' + this.seller.id).then((response) => {
+//        response = response.body;
+//        if (response.errno === ERR_OK) {
+//          this.seller = response.data;
+//          this.seller = Object.assign({}, this.seller, response.data);
+//        }
+//      });
+
+      this.seller = data.seller;
     },
     components: {
       'v-header': header

@@ -147,7 +147,7 @@
           return;
         }
         this.selectedFood = food;
-        this.$refs.food.show();
+        this.$refs.food.show();npm
       },
       incrementTotal(target) {
         this.$refs.shopCart.drop(target);
